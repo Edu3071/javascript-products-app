@@ -31,7 +31,7 @@
       
                     <select class="custom-select" id="name">
                     
-                        <option selected="">Nombre del Producto</option>
+                        <option selected="Pizza">Nombre del Producto</option>
                         <option value="Pizza">Pizza</option>
                         <option value="Muzza">Muzza</option>
                         <option value="Faina">Faina</option>
@@ -40,12 +40,11 @@
 
                      </div>
                      <div class="form-group">
-                         <input type="number" step="0.5" id="metros" placeholder="metros" class="form-control">
+                         <input type="number" value="0.5" step="0.5" id="amount" placeholder="metros" class="form-control">
 
                      </div>
-                     <div class="form-group">
-                         <input type="number" id="cost" min="1" value="0" max="4000" placeholder="Precio" class="form-control">
-                     </div>
+                     <h5 id="totalItem"></h5>
+                     
                      <input type="submit" value="save" class="btn btn-danger btn-block"> <div class="form-group">
                         
                       </div>
@@ -59,9 +58,8 @@
             
              </div>
              <div class="forms">
-                 <div id="total">
-                    <button type="button" class="btn btn-primary btn-lg">TOTAL</button>   
-
+                 <div>
+                   <h5 id="total"></h5>
                      
                  </div>
              </div>
@@ -77,6 +75,9 @@
 
 
     </div>
-    <script src="application.js"></script>
+    
+    <script src="DataLayer.js"></script>
+    <script src="Item.js"></script>
+    <script src="Application.js"></script>
 </body>
 </html>
