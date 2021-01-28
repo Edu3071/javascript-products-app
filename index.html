@@ -1,83 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>applicationJs</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css ">
+    
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/cyborg/bootstrap.min.css "
+    />
+    <link href="estilos.css"/>
     <!-- bootstrap cdn -->
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <a href="/" class="navbar-brand" href="#"> FOGATA pizza & pan
-    </a>
+      <a href="/" class="navbar-brand" id="title" href="#" >
+      <h1>  FOGATA pizza & pan </h1>
+      </a>
+      <img
+        src="images/imglogoprincipal.jpg"
+        style=" border-color:rgb(163, 94, 4);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 200px;
+    width: 120px; height: 120px; 
+     "
+      />
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger nav justify-content-end" >
+     
+      <a  href="mailto:edu3071@hotmail.com" type="button" class="btn btn-primary"
+        >Contacto
+      </a>
+      <a href="https://actualidad.rt.com/ciencias/view/25832-Cient%C3%ADficos-demuestran-que-comer-pizza-es-saludable-y-protege-de-enfermedades" type="button" class="btn btn-secondary">Ayuda</a>
+      <a href="tel:092426352" type="button" class="btn btn-success">Telefono</a>
+      
     </nav>
     <div class="container">
-    <!-- APPLICATION -->
-     <div id="app" class="row pt-5">
-         <div class="col-md-4">
-             <div class="card">
-                 <div class="card-header">
-                    <h4>Seleccione Producto</h4>             
-                 </div>
-                 <form id="product-form" class="card-body">
-                
-
-                     <div class="form-group">
-                         
     
-      
-                    <select class="custom-select" id="name">
-                    
-                        <option selected="Pizza">Nombre del Producto</option>
-                        <option value="Pizza">Pizza</option>
-                        <option value="Muzza">Muzza</option>
-                        <option value="Faina">Faina</option>
-                    </select>
-    
+      <div class="card mb-3">
+        <h3 class="card-header">FOGATA Pizza & Pan</h3>
+        <div class="card-body">
+          <h5 class="card-title">Pizza & Pan Artesanales</h5>
+          <h6 class="card-subtitle text-muted"></h6>
+        </div>
+        <img src="images/imagen2.jpg" />
 
-                     </div>
-                     <div class="form-group">
-                         <input type="number" value="0.5" step="0.5" id="amount" placeholder="metros" class="form-control">
+        <div class="card-body">
+          <p class="card-text">
+            Deliciosas pizzas hechas en <strong>horno a leña</strong>, sabor tradicional.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-danger">Muzzarella por metro</li>
+          <li class="list-group-item list-group-item-warning">Pizetas <strong>GRANDES</strong> para la familia</li>
+          <li class="list-group-item list-group-item-success">Los mas ricos <strong>FAINA</STRONG> de Uruguay</li>
+        </ul>
+        <div class="card-body">
+        
+          <a href="images/imagen1.jpg"  class="card-link">Fotos</a>
+          <a href="http://www.italia.it/es/ideas-de-viaje/gastronomia/la-pizza.html" class="card-link">La Pizza</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Sobre nosotros..</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Conozca a nuestro <strong>PIZZERO</STRONG></h6>
+          <p class="card-text">
+            Eduardo , con experiencia en grandes pizzerias , 8 años en <strong>Il Mondo Della Pizza</strong> y 12 años en <strong>PIZZA SUBTE</strong>.
+          </p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <!-- APPLICATION -->
+      <div id="app" class="row pt-5">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Seleccione Producto</h4>
+            </div>
+            <form id="product-form" class="card-body">
+              <div class="form-group">
+                <select class="custom-select" id="name">
+                  <option selected="Pizza">Nombre del Producto</option>
+                  <option value="Pizza">Pizza</option>
+                  <option value="Muzza">Muzza</option>
+                  <option value="Faina">Faina</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  value="0.5"
+                  step="0.5"
+                  id="amount"
+                  placeholder="metros"
+                  class="form-control"
+                />
+              </div>
+              <h5 id="totalItem"></h5>
 
-                     </div>
-                     <h5 id="totalItem"></h5>
-                     
-                     <input type="submit" value="save" class="btn btn-danger btn-block"> <div class="form-group">
-                        
-                      </div>
+              <input
+                type="submit"
+                value="save"
+                class="btn btn-danger btn-block"
+              />
+              <div class="form-group"></div>
+            </form>
+          </div>
+        </div>
 
-                 </form>
-             </div>
-         </div>
-
-         <div class="col-md-8">
-             <div id="product-list">
-            
-             </div>
-             <div class="forms">
-                 <div>
-                   <h5 id="total"></h5>
-                     
-                 </div>
-             </div>
-         </div>
-
-
-
-
-
-     </div>
-
-
-
-
+        <div class="col-md-8">
+          <div id="product-list"></div>
+          <div class="forms">
+            <div>
+              <h5 id="total"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <script src="DataLayer.js"></script>
     <script src="Item.js"></script>
     <script src="Application.js"></script>
-</body>
+  </body>
 </html>

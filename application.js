@@ -46,6 +46,7 @@ function deleteItem(id) {
   ui.refresh();
 }
 
+
 // DOM events
 document
   .getElementById("product-form")
