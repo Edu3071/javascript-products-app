@@ -63,7 +63,7 @@ document
     const ui = new UI();
     ui.refresh();
 
-    if (name === "" || metros === "") {
+    if (name === "Nombre del Producto" || amount === "0") {
       return ui.showMessage("complete los campos", "danger");
     }
 
